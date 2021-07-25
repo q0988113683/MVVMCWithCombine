@@ -10,6 +10,8 @@ import Combine
 
 class CalendarViewController: UIViewController {
 
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var calendarCollectionView: UICollectionView!{
         didSet{
             calendarCollectionView.register(nibSupplementaryView: HeaderCollectionReusableView.self, kind: UICollectionView.elementKindSectionHeader)
@@ -26,10 +28,14 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var previousWeekButton: UIButton!
     @IBOutlet weak var nextWeekButton: UIButton!
     
+    
+    // MARK: - Private
     private var calendarManager = CalendarManager()
     private var subscriptions = Set<AnyCancellable>()
     private var viewModel = CalendarViewModel()
     
+    
+    // MARK: - Public methods
     var didClickDay = PassthroughSubject<SpecificTime, Never>()
     
     override func viewDidLoad() {

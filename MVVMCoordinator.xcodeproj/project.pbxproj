@@ -71,6 +71,12 @@
 		E5D8C0C226A2D185004B84FF /* CalendarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C0C126A2D185004B84FF /* CalendarInformationViewController.swift */; };
 		E5D8C0C726A2D48B004B84FF /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D8C0C626A2D48B004B84FF /* Calendar.storyboard */; };
 		E5D8C0CB26A2DCDB004B84FF /* CoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C0CA26A2DCDB004B84FF /* CoordinatorFinishOutput.swift */; };
+		E5FE9D0726AD719600CE44D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE9D0626AD719600CE44D7 /* LoginViewController.swift */; };
+		E5FE9D1126ADB56800CE44D7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FE9D1026ADB56800CE44D7 /* Login.storyboard */; };
+		E5FE9D1426ADB59E00CE44D7 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE9D1326ADB59E00CE44D7 /* LoginCoordinator.swift */; };
+		E5FE9D1826ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE9D1726ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift */; };
+		E5FE9D1C26ADCA2500CE44D7 /* ViewControllerFactory+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE9D1B26ADCA2500CE44D7 /* ViewControllerFactory+Login.swift */; };
+		E5FE9D2026ADD08B00CE44D7 /* ApplicationInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE9D1F26ADD08B00CE44D7 /* ApplicationInstructor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +146,12 @@
 		E5D8C0C126A2D185004B84FF /* CalendarInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInformationViewController.swift; sourceTree = "<group>"; };
 		E5D8C0C626A2D48B004B84FF /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		E5D8C0CA26A2DCDB004B84FF /* CoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishOutput.swift; sourceTree = "<group>"; };
+		E5FE9D0626AD719600CE44D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E5FE9D1026ADB56800CE44D7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E5FE9D1326ADB59E00CE44D7 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		E5FE9D1726ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerFactory+Calendars.swift"; sourceTree = "<group>"; };
+		E5FE9D1B26ADCA2500CE44D7 /* ViewControllerFactory+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerFactory+Login.swift"; sourceTree = "<group>"; };
+		E5FE9D1F26ADD08B00CE44D7 /* ApplicationInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInstructor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D8BFF8269F35D0004B84FF /* ApplicationCoordinator.swift */,
-				E5D8C03126A08989004B84FF /* CalendarCoordinator.swift */,
+				E5FE9D1F26ADD08B00CE44D7 /* ApplicationInstructor.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -256,22 +268,21 @@
 		E5D8C01926A07FF4004B84FF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E5D8C0C026A2D15E004B84FF /* CalendarInformation */,
-				E5D8C01A26A0802E004B84FF /* Calendar */,
+				E5FE9D0526AD716A00CE44D7 /* Login */,
+				E5D8C01A26A0802E004B84FF /* Calendars */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		E5D8C01A26A0802E004B84FF /* Calendar */ = {
+		E5D8C01A26A0802E004B84FF /* Calendars */ = {
 			isa = PBXGroup;
 			children = (
-				E5D8C02726A088A9004B84FF /* Model */,
-				E5D8C02226A0887F004B84FF /* Layout */,
-				E5D8C09A26A10BFA004B84FF /* cell */,
-				E5D8C01B26A0803B004B84FF /* CalendarViewController.swift */,
-				E5D8C01F26A081B7004B84FF /* CalendarViewModel.swift */,
+				E5FE9D1726ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift */,
+				E5D8C03126A08989004B84FF /* CalendarCoordinator.swift */,
+				E5D8C0C026A2D15E004B84FF /* CalendarInformation */,
+				E5FE9D0B26ADACD400CE44D7 /* Calendar */,
 			);
-			path = Calendar;
+			path = Calendars;
 			sourceTree = "<group>";
 		};
 		E5D8C02226A0887F004B84FF /* Layout */ = {
@@ -501,8 +512,31 @@
 			children = (
 				E5D8BFD9269F2BD3004B84FF /* Main.storyboard */,
 				E5D8C0C626A2D48B004B84FF /* Calendar.storyboard */,
+				E5FE9D1026ADB56800CE44D7 /* Login.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E5FE9D0526AD716A00CE44D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E5FE9D1B26ADCA2500CE44D7 /* ViewControllerFactory+Login.swift */,
+				E5FE9D1326ADB59E00CE44D7 /* LoginCoordinator.swift */,
+				E5FE9D0626AD719600CE44D7 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E5FE9D0B26ADACD400CE44D7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				E5D8C02726A088A9004B84FF /* Model */,
+				E5D8C02226A0887F004B84FF /* Layout */,
+				E5D8C09A26A10BFA004B84FF /* cell */,
+				E5D8C01B26A0803B004B84FF /* CalendarViewController.swift */,
+				E5D8C01F26A081B7004B84FF /* CalendarViewModel.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,6 +604,7 @@
 				E5D8C09426A10BA4004B84FF /* schedule3.json in Resources */,
 				E5D8C09526A10BA4004B84FF /* schedule2.json in Resources */,
 				E5D8BFDB269F2BD3004B84FF /* Main.storyboard in Resources */,
+				E5FE9D1126ADB56800CE44D7 /* Login.storyboard in Resources */,
 				E5D8C09F26A10BFA004B84FF /* TimeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +619,7 @@
 				E5D8C02426A0888E004B84FF /* CalendarHorizontalCollectionViewLayout.swift in Sources */,
 				E5D8C01C26A0803B004B84FF /* CalendarViewController.swift in Sources */,
 				E5D8C02C26A088C1004B84FF /* SpecificTime.swift in Sources */,
+				E5FE9D1826ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift in Sources */,
 				E5D8C0B026A10C30004B84FF /* CaseIterable+.swift in Sources */,
 				E5D8BFF5269F3535004B84FF /* BaseCoordinator.swift in Sources */,
 				E5D8C07826A10B24004B84FF /* URLSessionDataTaskProtocol.swift in Sources */,
@@ -599,6 +635,7 @@
 				E5D8C05026A10A00004B84FF /* HTTPMethod.swift in Sources */,
 				E5D8C0B326A10C30004B84FF /* Date+.swift in Sources */,
 				E5D8C07A26A10B24004B84FF /* MockURLSession.swift in Sources */,
+				E5FE9D1426ADB59E00CE44D7 /* LoginCoordinator.swift in Sources */,
 				E5D8C0A126A10BFA004B84FF /* TimeCollectionViewCell.swift in Sources */,
 				E5D8C0B126A10C30004B84FF /* Calendar+.swift in Sources */,
 				E5D8C07B26A10B24004B84FF /* URLSessionProtocol.swift in Sources */,
@@ -609,6 +646,7 @@
 				E5D8C03226A08989004B84FF /* CalendarCoordinator.swift in Sources */,
 				E5D8C0B726A10C30004B84FF /* CalendarManager.swift in Sources */,
 				E5D8BFD8269F2BD3004B84FF /* ViewController.swift in Sources */,
+				E5FE9D0726AD719600CE44D7 /* LoginViewController.swift in Sources */,
 				E5D8C01026A07EAF004B84FF /* ViewControllerFactory.swift in Sources */,
 				E5D8C0B426A10C30004B84FF /* UIColor+.swift in Sources */,
 				E5D8C0C226A2D185004B84FF /* CalendarInformationViewController.swift in Sources */,
@@ -629,10 +667,12 @@
 				E5D8C07E26A10B34004B84FF /* MockDataProtocol.swift in Sources */,
 				E5D8C0CB26A2DCDB004B84FF /* CoordinatorFinishOutput.swift in Sources */,
 				E5D8C01526A07F5E004B84FF /* UIStoryboard.swift in Sources */,
+				E5FE9D2026ADD08B00CE44D7 /* ApplicationInstructor.swift in Sources */,
 				E5D8C02F26A08945004B84FF /* CoordinatorFactory.swift in Sources */,
 				E5D8C04426A109AE004B84FF /* ResponseType.swift in Sources */,
 				E5D8C03826A10963004B84FF /* APIManagerProtocol.swift in Sources */,
 				E5D8BFF9269F35D0004B84FF /* ApplicationCoordinator.swift in Sources */,
+				E5FE9D1C26ADCA2500CE44D7 /* ViewControllerFactory+Login.swift in Sources */,
 				E5D8C07926A10B24004B84FF /* MockURLSessionDataTask.swift in Sources */,
 				E5D8C06126A10A7B004B84FF /* NetworkControllerProtocol.swift in Sources */,
 				E5D8C04026A1099E004B84FF /* APIError.swift in Sources */,

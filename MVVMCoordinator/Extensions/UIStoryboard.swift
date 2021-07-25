@@ -18,4 +18,8 @@ extension UIStoryboard {
     static var calendar: UIStoryboard {
         return UIStoryboard.init(name: "Calendar", bundle: nil)
     }
+    
+    static var login: UIStoryboard {
+        return UIStoryboard.init(name: "Login", bundle: nil)
+    }
 }
