@@ -8,18 +8,17 @@
 import UIKit
 import Combine
 
-
-protocol CalendarInformationViewControllerProtocol: class {
-    var onBack: PassthroughSubject<Void, Never> { get set }
+protocol CalendarInformationViewControllerDelegate {
+    func ViewControllerDidClickBack(viewController: CalendarInformationViewController)
 }
 
-class CalendarInformationViewController: UIViewController, CalendarInformationViewControllerProtocol {
-    
-    var onBack = PassthroughSubject<Void, Never>()
+class CalendarInformationViewController: UIViewController {
     
     @IBOutlet weak var informationLabel: UILabel!
     
     var day: SpecificTime?
+    
+    var delegate: CalendarInformationViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +31,6 @@ class CalendarInformationViewController: UIViewController, CalendarInformationVi
     }
     
     @IBAction func goBack(){
-        self.onBack.send()
+        self.delegate?.ViewControllerDidClickBack(viewController: self)
     }
 }

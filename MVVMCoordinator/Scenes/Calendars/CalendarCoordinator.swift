@@ -29,21 +29,34 @@ final class CalendarCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     
     // MARK: - Private methods
     private func showCalendarViewController() {
+        let viewModel = CalendarViewModel()
+        
         let calendarVC = self.viewControllerFactory.instantiateCalendarViewController()
         
-        calendarVC.didClickDay.sink { [unowned self] (time) in
-            self.showCalendarInformationViewController(withDay: time)
-        }.store(in: &subscriptions)
+        calendarVC.viewModel = viewModel
         
+        calendarVC.delegate = self
+    
         self.router.setRootModule(calendarVC, hideBar: true)
     }
     
     private func showCalendarInformationViewController(withDay day: SpecificTime) {
+        
         let calendarVC = self.viewControllerFactory.instantiateCalendarInformationViewController()
         calendarVC.day = day
-        calendarVC.onBack.sink { [unowned self] (_) in
-            self.router.popModule()
-        }.store(in: &subscriptions)
+        calendarVC.delegate = self
         self.router.push(calendarVC)
+    }
+}
+
+extension CalendarCoordinator: CalendarViewControllerDelegate {
+    func ViewController(viewController: CalendarViewController, didClickDay time: SpecificTime) {
+        self.showCalendarInformationViewController(withDay: time)
+    }
+}
+
+extension CalendarCoordinator: CalendarInformationViewControllerDelegate {
+    func ViewControllerDidClickBack(viewController: CalendarInformationViewController) {
+        self.router.popModule()
     }
 }

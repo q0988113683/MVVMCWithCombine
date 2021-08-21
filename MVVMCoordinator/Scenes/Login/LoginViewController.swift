@@ -8,19 +8,19 @@
 import UIKit
 import Combine
 
-protocol LoginViewControllerProtocol: class {
-    var onLogin: PassthroughSubject<Void, Never> { get set }
+protocol LoginViewControllerDelegate: class {
+    func LoginViewControllerDidClickLogin(viewController: LoginViewController)
 }
 
-class LoginViewController: UIViewController, LoginViewControllerProtocol {
+class LoginViewController: UIViewController {
     
-    var onLogin = PassthroughSubject<Void, Never>()
+    var delegate: LoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func login(){
-        self.onLogin.send()
+        self.delegate?.LoginViewControllerDidClickLogin(viewController: self)
     }
 }

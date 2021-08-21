@@ -8,6 +8,11 @@
 import UIKit
 import Combine
 
+
+protocol CalendarViewControllerDelegate {
+    func ViewController(viewController: CalendarViewController,
+                        didClickDay time: SpecificTime)
+}
 class CalendarViewController: UIViewController {
 
     // MARK: - IBOutlet
@@ -32,11 +37,9 @@ class CalendarViewController: UIViewController {
     // MARK: - Private
     private var calendarManager = CalendarManager()
     private var subscriptions = Set<AnyCancellable>()
-    private var viewModel = CalendarViewModel()
     
-    
-    // MARK: - Public methods
-    var didClickDay = PassthroughSubject<SpecificTime, Never>()
+    var viewModel: CalendarViewModel!
+    var delegate: CalendarViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +125,6 @@ extension CalendarViewController: UICollectionViewDelegate{
         guard let item = viewModel.getSpecificTime(at: indexPath.row, section: indexPath.section) else {
             fatalError()
         }
-        self.didClickDay.send(item)
+        self.delegate?.ViewController(viewController: self, didClickDay: item)
     }
 }

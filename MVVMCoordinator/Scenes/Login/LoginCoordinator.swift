@@ -31,10 +31,16 @@ final class LoginCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private func showLoginViewController() {
         let loginVC = self.viewControllerFactory.instantiateLoginViewController()
         
-        loginVC.onLogin.sink { [unowned self] in
-            self.finishFlow.send()
-        }.store(in: &subscriptions)
+        loginVC.delegate = self
         
         self.router.setRootModule(loginVC, hideBar: true)
     }
+}
+
+extension LoginCoordinator: LoginViewControllerDelegate{
+    func LoginViewControllerDidClickLogin(viewController: LoginViewController) {
+        self.finishFlow.send()
+    }
+    
+    
 }
