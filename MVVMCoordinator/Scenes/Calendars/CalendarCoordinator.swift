@@ -16,7 +16,7 @@ final class CalendarCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     private let coordinatorFactory: CoordinatorFactoryProtocol
     private let viewControllerFactory: ViewControllerFactory
     private var subscriptions = Set<AnyCancellable>()
-    
+     
     init(router: RouterProtocol, coordinatorFactory: CoordinatorFactoryProtocol, viewControllerFactory: ViewControllerFactory) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
@@ -41,22 +41,16 @@ final class CalendarCoordinator: BaseCoordinator, CoordinatorFinishOutput {
     }
     
     private func showCalendarInformationViewController(withDay day: SpecificTime) {
-        
-        let calendarVC = self.viewControllerFactory.instantiateCalendarInformationViewController()
-        calendarVC.day = day
-        calendarVC.delegate = self
-        self.router.push(calendarVC)
+        let calendarInformationCoordinator = CalendarInformationCoordinator(router: router,
+                                                                            coordinatorFactory: coordinatorFactory,
+                                                                            viewControllerFactory: viewControllerFactory,
+                                                                            day: day)
+        calendarInformationCoordinator.start()
     }
 }
 
 extension CalendarCoordinator: CalendarViewControllerDelegate {
     func ViewController(viewController: CalendarViewController, didClickDay time: SpecificTime) {
         self.showCalendarInformationViewController(withDay: time)
-    }
-}
-
-extension CalendarCoordinator: CalendarInformationViewControllerDelegate {
-    func ViewControllerDidClickBack(viewController: CalendarInformationViewController) {
-        self.router.popModule()
     }
 }

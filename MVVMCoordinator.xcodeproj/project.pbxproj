@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123351DF29057CB500E5C766 /* CalendarInformationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123351DE29057CB500E5C766 /* CalendarInformationCoordinator.swift */; };
 		12736BE62904E4D50098481B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12736BE52904E4D50098481B /* String+.swift */; };
 		12736BE82904F2DA0098481B /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12736BE72904F2DA0098481B /* Error+.swift */; };
 		E5D8BFD4269F2BD3004B84FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8BFD3269F2BD3004B84FF /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123351DE29057CB500E5C766 /* CalendarInformationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInformationCoordinator.swift; sourceTree = "<group>"; };
 		12736BE52904E4D50098481B /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		12736BE72904F2DA0098481B /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 		E5D8BFD0269F2BD3004B84FF /* MVVMCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123351DC29057C4B00E5C766 /* CalendarInformation */ = {
+			isa = PBXGroup;
+			children = (
+				E5D8C0C126A2D185004B84FF /* CalendarInformationViewController.swift */,
+				123351DE29057CB500E5C766 /* CalendarInformationCoordinator.swift */,
+			);
+			path = CalendarInformation;
+			sourceTree = "<group>";
+		};
 		E5D8BFC7269F2BD3004B84FF = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +277,7 @@
 		E5D8C01926A07FF4004B84FF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				123351DC29057C4B00E5C766 /* CalendarInformation */,
 				E5FE9D0526AD716A00CE44D7 /* Login */,
 				E5D8C01A26A0802E004B84FF /* Calendars */,
 			);
@@ -277,7 +289,6 @@
 			children = (
 				E5FE9D1726ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift */,
 				E5D8C03126A08989004B84FF /* CalendarCoordinator.swift */,
-				E5D8C0C026A2D15E004B84FF /* CalendarInformation */,
 				E5FE9D0B26ADACD400CE44D7 /* Calendar */,
 			);
 			path = Calendars;
@@ -493,14 +504,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E5D8C0C026A2D15E004B84FF /* CalendarInformation */ = {
-			isa = PBXGroup;
-			children = (
-				E5D8C0C126A2D185004B84FF /* CalendarInformationViewController.swift */,
-			);
-			path = CalendarInformation;
-			sourceTree = "<group>";
-		};
 		E5D8C0C526A2D2DC004B84FF /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +649,7 @@
 				12736BE82904F2DA0098481B /* Error+.swift in Sources */,
 				E5D8C0B626A10C30004B84FF /* NibProvidable.swift in Sources */,
 				E5D8C06B26A10ACB004B84FF /* ScheduleEndPoint.swift in Sources */,
+				123351DF29057CB500E5C766 /* CalendarInformationCoordinator.swift in Sources */,
 				E5D8BFD4269F2BD3004B84FF /* AppDelegate.swift in Sources */,
 				E5D8C0B226A10C30004B84FF /* Dictionary+.swift in Sources */,
 				E5D8C05826A10A38004B84FF /* ScheduleAPIController.swift in Sources */,
