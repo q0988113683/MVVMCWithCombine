@@ -6,9 +6,9 @@
 //
 
 import Foundation
-public class BaseAPIController<EndPoint>: APIControllerProtocol where EndPoint: EndPointType {
-    var networkController: NetworkControllerProtocol
-    init(networkController: NetworkControllerProtocol) {
+public class BaseAPIController {
+    var networkController: any NetworkControllerProtocol
+    init(networkController: any NetworkControllerProtocol) {
         self.networkController = networkController
     }
 }

@@ -8,12 +8,11 @@ extension Schedule: Decodable {
     }
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         let start = try container.decode(String.self, forKey: .start)
-        self.start = dateFormatter.date(from: start)
+        self.start = start.convertToDate()
         let end = try container.decode(String.self, forKey: .end)
-        self.end = dateFormatter.date(from: end)
+        self.end = end.convertToDate()
         
     }
 }
+

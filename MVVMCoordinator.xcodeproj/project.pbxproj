@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12736BE62904E4D50098481B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12736BE52904E4D50098481B /* String+.swift */; };
+		12736BE82904F2DA0098481B /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12736BE72904F2DA0098481B /* Error+.swift */; };
 		E5D8BFD4269F2BD3004B84FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8BFD3269F2BD3004B84FF /* AppDelegate.swift */; };
 		E5D8BFD8269F2BD3004B84FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8BFD7269F2BD3004B84FF /* ViewController.swift */; };
 		E5D8BFDB269F2BD3004B84FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D8BFD9269F2BD3004B84FF /* Main.storyboard */; };
@@ -36,15 +38,11 @@
 		E5D8C05026A10A00004B84FF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C04F26A10A00004B84FF /* HTTPMethod.swift */; };
 		E5D8C05526A10A29004B84FF /* ScheduleAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C05426A10A29004B84FF /* ScheduleAPIProtocol.swift */; };
 		E5D8C05826A10A38004B84FF /* ScheduleAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C05726A10A38004B84FF /* ScheduleAPIController.swift */; };
-		E5D8C05B26A10A48004B84FF /* APIControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C05A26A10A48004B84FF /* APIControllerProtocol.swift */; };
-		E5D8C05E26A10A69004B84FF /* APIControllerProtocol+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C05D26A10A69004B84FF /* APIControllerProtocol+.swift */; };
 		E5D8C06126A10A7B004B84FF /* NetworkControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C06026A10A7B004B84FF /* NetworkControllerProtocol.swift */; };
 		E5D8C06426A10A89004B84FF /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C06326A10A89004B84FF /* NetworkController.swift */; };
 		E5D8C06726A10A9B004B84FF /* BaseAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C06626A10A9B004B84FF /* BaseAPIController.swift */; };
 		E5D8C06B26A10ACB004B84FF /* ScheduleEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C06A26A10ACB004B84FF /* ScheduleEndPoint.swift */; };
 		E5D8C07126A10AF0004B84FF /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C07026A10AF0004B84FF /* URLRequestFactory.swift */; };
-		E5D8C07826A10B24004B84FF /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C07426A10B23004B84FF /* URLSessionDataTaskProtocol.swift */; };
-		E5D8C07926A10B24004B84FF /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C07526A10B24004B84FF /* MockURLSessionDataTask.swift */; };
 		E5D8C07A26A10B24004B84FF /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C07626A10B24004B84FF /* MockURLSession.swift */; };
 		E5D8C07B26A10B24004B84FF /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C07726A10B24004B84FF /* URLSessionProtocol.swift */; };
 		E5D8C07E26A10B34004B84FF /* MockDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8C07D26A10B34004B84FF /* MockDataProtocol.swift */; };
@@ -80,6 +78,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12736BE52904E4D50098481B /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		12736BE72904F2DA0098481B /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
 		E5D8BFD0269F2BD3004B84FF /* MVVMCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D8BFD3269F2BD3004B84FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D8BFD7269F2BD3004B84FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,15 +111,11 @@
 		E5D8C04F26A10A00004B84FF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		E5D8C05426A10A29004B84FF /* ScheduleAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPIProtocol.swift; sourceTree = "<group>"; };
 		E5D8C05726A10A38004B84FF /* ScheduleAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPIController.swift; sourceTree = "<group>"; };
-		E5D8C05A26A10A48004B84FF /* APIControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIControllerProtocol.swift; sourceTree = "<group>"; };
-		E5D8C05D26A10A69004B84FF /* APIControllerProtocol+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIControllerProtocol+.swift"; sourceTree = "<group>"; };
 		E5D8C06026A10A7B004B84FF /* NetworkControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkControllerProtocol.swift; sourceTree = "<group>"; };
 		E5D8C06326A10A89004B84FF /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		E5D8C06626A10A9B004B84FF /* BaseAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIController.swift; sourceTree = "<group>"; };
 		E5D8C06A26A10ACB004B84FF /* ScheduleEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleEndPoint.swift; sourceTree = "<group>"; };
 		E5D8C07026A10AF0004B84FF /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
-		E5D8C07426A10B23004B84FF /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
-		E5D8C07526A10B24004B84FF /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		E5D8C07626A10B24004B84FF /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		E5D8C07726A10B24004B84FF /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		E5D8C07D26A10B34004B84FF /* MockDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockDataProtocol.swift; sourceTree = "<group>"; };
@@ -261,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				E5D8C01426A07F5E004B84FF /* UIStoryboard.swift */,
+				12736BE72904F2DA0098481B /* Error+.swift */,
+				12736BE52904E4D50098481B /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,8 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				E5D8C05326A10A1F004B84FF /* Schedule */,
-				E5D8C05A26A10A48004B84FF /* APIControllerProtocol.swift */,
-				E5D8C05D26A10A69004B84FF /* APIControllerProtocol+.swift */,
 				E5D8C06026A10A7B004B84FF /* NetworkControllerProtocol.swift */,
 				E5D8C06326A10A89004B84FF /* NetworkController.swift */,
 				E5D8C06626A10A9B004B84FF /* BaseAPIController.swift */,
@@ -396,8 +392,6 @@
 			isa = PBXGroup;
 			children = (
 				E5D8C07626A10B24004B84FF /* MockURLSession.swift */,
-				E5D8C07526A10B24004B84FF /* MockURLSessionDataTask.swift */,
-				E5D8C07426A10B23004B84FF /* URLSessionDataTaskProtocol.swift */,
 				E5D8C07726A10B24004B84FF /* URLSessionProtocol.swift */,
 				E5D8C07326A10B08004B84FF /* MockData */,
 			);
@@ -622,7 +616,6 @@
 				E5FE9D1826ADC9F200CE44D7 /* ViewControllerFactory+Calendars.swift in Sources */,
 				E5D8C0B026A10C30004B84FF /* CaseIterable+.swift in Sources */,
 				E5D8BFF5269F3535004B84FF /* BaseCoordinator.swift in Sources */,
-				E5D8C07826A10B24004B84FF /* URLSessionDataTaskProtocol.swift in Sources */,
 				E5D8C002269F3BCF004B84FF /* Presentable.swift in Sources */,
 				E5D8C04826A109D2004B84FF /* GetScheduleResponse.swift in Sources */,
 				E5D8BFF1269F3512004B84FF /* Coordinator.swift in Sources */,
@@ -650,8 +643,8 @@
 				E5D8C01026A07EAF004B84FF /* ViewControllerFactory.swift in Sources */,
 				E5D8C0B426A10C30004B84FF /* UIColor+.swift in Sources */,
 				E5D8C0C226A2D185004B84FF /* CalendarInformationViewController.swift in Sources */,
+				12736BE82904F2DA0098481B /* Error+.swift in Sources */,
 				E5D8C0B626A10C30004B84FF /* NibProvidable.swift in Sources */,
-				E5D8C05B26A10A48004B84FF /* APIControllerProtocol.swift in Sources */,
 				E5D8C06B26A10ACB004B84FF /* ScheduleEndPoint.swift in Sources */,
 				E5D8BFD4269F2BD3004B84FF /* AppDelegate.swift in Sources */,
 				E5D8C0B226A10C30004B84FF /* Dictionary+.swift in Sources */,
@@ -659,9 +652,9 @@
 				E5D8C03C26A10978004B84FF /* APIManager.swift in Sources */,
 				E5D8C005269F3CE1004B84FF /* RouterProtocol.swift in Sources */,
 				E5D8C02926A088B6004B84FF /* SpecificDay.swift in Sources */,
-				E5D8C05E26A10A69004B84FF /* APIControllerProtocol+.swift in Sources */,
 				E5D8C02026A081B7004B84FF /* CalendarViewModel.swift in Sources */,
 				E5D8C0BD26A2C044004B84FF /* ViewController+Coordinator.swift in Sources */,
+				12736BE62904E4D50098481B /* String+.swift in Sources */,
 				E5D8C06426A10A89004B84FF /* NetworkController.swift in Sources */,
 				E5D8C0B526A10C30004B84FF /* NibRegisterable.swift in Sources */,
 				E5D8C07E26A10B34004B84FF /* MockDataProtocol.swift in Sources */,
@@ -673,7 +666,6 @@
 				E5D8C03826A10963004B84FF /* APIManagerProtocol.swift in Sources */,
 				E5D8BFF9269F35D0004B84FF /* ApplicationCoordinator.swift in Sources */,
 				E5FE9D1C26ADCA2500CE44D7 /* ViewControllerFactory+Login.swift in Sources */,
-				E5D8C07926A10B24004B84FF /* MockURLSessionDataTask.swift in Sources */,
 				E5D8C06126A10A7B004B84FF /* NetworkControllerProtocol.swift in Sources */,
 				E5D8C04026A1099E004B84FF /* APIError.swift in Sources */,
 			);

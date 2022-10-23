@@ -2,11 +2,11 @@
 
 import UIKit
 
-protocol NibProvidable: class {
+protocol NibProvidable: AnyObject {
     static func nib(bundle: Bundle?) -> UINib
 }
 
-protocol NibNameProvidable: class {
+protocol NibNameProvidable: AnyObject {
     static var nibName: String { get }
 }
 

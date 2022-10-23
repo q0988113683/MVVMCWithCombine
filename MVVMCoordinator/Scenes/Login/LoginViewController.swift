@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-protocol LoginViewControllerDelegate: class {
+protocol LoginViewControllerDelegate {
     func LoginViewControllerDidClickLogin(viewController: LoginViewController)
 }
 

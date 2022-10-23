@@ -7,6 +7,10 @@
 
 import Foundation
 import Combine
+
+public typealias ResponseCompletion<Value> = AnyPublisher<Value, Error> where Value: ResponseType
+
 protocol NetworkControllerProtocol {
-    func request(endpoint: EndPointType) -> Future<Data, Error>
+    associatedtype Value
+    func request<Value>(endpoint: EndPointType) -> ResponseCompletion<Value>
 }

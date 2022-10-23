@@ -8,4 +8,5 @@
 import Foundation
 public enum APIError: Error {
     case unowned
+    case unexpectedResponse
 }

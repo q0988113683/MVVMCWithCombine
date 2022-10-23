@@ -8,5 +8,6 @@
 import Foundation
 import Combine
 public protocol ScheduleAPIProtocol{
-    func getSchedule(data: ScheduleUrl) -> Future<GetScheduleResponse, Error>
+    func getSchedule(from url: ScheduleUrl) -> AnyPublisher<GetScheduleResponse, Error>
 }
+

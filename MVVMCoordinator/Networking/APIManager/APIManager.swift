@@ -14,7 +14,7 @@ public class APIManager: APIManagerProtocol {
     
     public static var shared: APIManager = APIManager()
     
-    private lazy var networkController: NetworkControllerProtocol = {
+    private lazy var networkController: any NetworkControllerProtocol = {
         switch environment{
         case .mock(let mockSession):
             return NetworkController(session: mockSession)

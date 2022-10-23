@@ -14,13 +14,12 @@ public enum ScheduleUrl: Int , CaseIterable{
     case file3
 }
 
-public class ScheduleAPIController: BaseAPIController<ScheduleEndPoint> {
+public class ScheduleAPIController: BaseAPIController {
     
 }
 
 extension ScheduleAPIController: ScheduleAPIProtocol{
-    public func getSchedule(data: ScheduleUrl) -> Future<GetScheduleResponse, Error> {
-        
-        return request(specificEndpoit: ScheduleEndPoint.schedule(url: "\(data)"), completionQueue: .main)
+    public func getSchedule(from url: ScheduleUrl) -> AnyPublisher<GetScheduleResponse, Error> {
+        networkController.request(endpoint: ScheduleEndPoint.schedule(url: "\(url)"))
     }
 }

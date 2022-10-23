@@ -23,10 +23,10 @@ class CalendarViewModel {
     fileprivate var subscriptions = Set<AnyCancellable>()
     
     init() {
-        getSchedule(with: time)
+        getSchedule(from: time)
     }
     
-    private func getSchedule(with time: ScheduleUrl){
+    private func getSchedule(from url: ScheduleUrl){
         
         let getScheduleCompletionHandler: (Subscribers.Completion<Error>) -> Void = { completion in
             switch completion {
@@ -47,20 +47,19 @@ class CalendarViewModel {
             }
         }
         
-        APIManager.shared.scheduleAPI.getSchedule(data: time)
-            .sink(receiveCompletion: getScheduleCompletionHandler,
-                  receiveValue: getScheduleHandler)
+        APIManager.shared.scheduleAPI.getSchedule(from: url)
+            .sink(receiveCompletion: getScheduleCompletionHandler, receiveValue: getScheduleHandler)
             .store(in: &subscriptions)
     }
     
     func getPreviousSchedule() {
         time = time.before()
-        getSchedule(with: time)
+        getSchedule(from: time)
     }
     
     func getNextSchedule() {
         time = time.next()
-        getSchedule(with: time)
+        getSchedule(from: time)
     }
 }
 
